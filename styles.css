@@ -209,16 +209,46 @@ footer {
         text-align: center;
         flex-basis: calc(100%/3);
     }
+
+    section {
+        grid-template-columns: 100%;
+    }
     .first {
         grid-column-start: 1;
         grid-row-start: 1;
     }
     .second {
-        grid-column-start: 1;
+        grid-column: 1;
         grid-row-start: 2;
     }
     .grid-element {
-        grid-column-end: span 2;
+        grid-column-end: span 1;
         grid-row-end: span 1;
+    }
+
+    .bio h4 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .bio p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .bio a {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .contact h3 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .contact h5 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    .var-font-art {
+        font-size: 2.2rem;
     }
 }
