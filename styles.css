@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'Sora';
+    src: url(https://fonts.gstatic.com/s/sora/v3/xMQbuFFYT72XzQUpDqW1KX4.woff2) format('woff2');
+    font-weight: 100 800;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: aqua;
+    font-family: 'Sora', sans-serif;
+    color: darkblue;;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+}
+
+a {
+    color: blue;
+}
+
+a:hover {
+    color: darkblue;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-variation-settings: "wght" 600;
+    padding-bottom: 2rem;
+}
+h1 {
+    font-size: 6rem;
+}
+h2 {
+    font-size: 5rem;
+}
+h3 {
+    font-size: 4rem;
+}
+h4 {
+    font-size: 3rem;
+}
+h5 {
+    font-size: 2rem;
+}
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .header-logo {
+        flex-basis: 50%;
+        padding: 3rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 5rem;
+        text-align: left;
+        font-variation-settings: "wght" 100;
+        --delay: 1000ms;
+        animation: breathe 2000ms infinite ease-in-out;
+        animation-delay: var(--delay);
+    }
+
+    @keyframes breathe {
+        0% {font-variation-settings: "wght" 100;}
+        50% {font-variation-settings: "wght" 800;}
+        100% {font-variation-settings: "wght" 100;}
+    }
+}
+
+nav {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-start;
+    border-left: 2px solid white;
+}
+
+.nav-item {
+    padding: 3rem;
+    font-size: 2rem;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item:active {
+    font-variation-settings: "wght" 800;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 500px;
+    overflow: hidden;
+    align-items: stretch;
+}
+
+.first {
+    grid-column-start: 1;
+}
+.second {
+    grid-column-start: 2;
+    background-color: white;
+}
+.grid-element {
+    grid-column-end: span 1;
+    padding: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.designer {
+    background-image: url('./jb.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.bio {
+    background-color: blue;
+    text-align: left;
+    padding: 3rem;
+}
+.bio h4 {
+    color: aqua;
+}
+.bio p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color:white;
+}
+.bio a {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: aqua;
+}
+.bio a:hover {
+    color: darkblue;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .var-font-art{
+        text-align: justify;
+        text-transform: uppercase;
+        color: blue;
+        font-variation-settings: "wght" 100;
+        --delay: 1000ms;
+        animation: breathe 2000ms infinite ease-in-out;
+        animation-delay: var(--delay);
+        padding-bottom: 0px;
+    }
+    .dark {
+        color: darkblue;
+    }
+}
+
+footer {
+    padding: 2rem 3rem 2rem 3rem;
+    color: white;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        display: block;
+    }
+    .header-logo {
+        display: block;
+        padding: 3rem;
+        text-align: center;
+        font-size: 50px;
+    }
+    nav {
+        flex-basis: auto;
+        border-left: none;
+        border-top: white 1px solid;
+        border-bottom: white 1px solid;
+        justify-content: space-around;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+    }
+    .nav-item {
+        padding: 1rem;
+        font-size: 1rem;
+        display: block;
+        text-align: center;
+        flex-basis: calc(100%/3);
+    }
+    .first {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    .second {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+    .grid-element {
+        grid-column-end: span 2;
+        grid-row-end: span 1;
+    }
+}
